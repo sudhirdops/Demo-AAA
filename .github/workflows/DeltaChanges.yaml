@@ -3,12 +3,9 @@ name: Deploy Delta changes to production org
 
 # Definition when the workflow should run
 on:
-    push:
-
+    pull_request:
       branches: [ develop ]
-
       paths: 
-
          - 'force-app/main/default/**'
 
 # Jobs to be executed
