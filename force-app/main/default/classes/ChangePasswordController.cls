@@ -1,7 +1,7 @@
 /**
  * @description       : 
  * @author            : ChangeMeIn@UserSettingsUnder.SFDoc
- * @group             : Testing changes for fucntionality
+ * @group             : Testing changes for fucntionality to class file
  * @last modified on  : 06-15-2022
  * @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
 **/
