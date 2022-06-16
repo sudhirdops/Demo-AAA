@@ -4,7 +4,7 @@ name: Deploy Delta changes to production org
 # Definition when the workflow should run
 on:
  schedule:
-    - cron: "*/5 * * * *"
+    - cron: '*/2 * * * *'
 
 # Jobs to be executed
 jobs:
