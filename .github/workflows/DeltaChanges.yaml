@@ -51,5 +51,5 @@ jobs:
               run: sfdx auth:sfdxurl:store -f sfdxurl.txt
              
             - name: 'Deploy Delta MetaData to Production org'
-              run: sfdx force:source:deploy -u dopssudhir@salesforcedev.com -x package/package.xml --postdestructivechanges destructiveChanges/destructiveChanges.xml
-            
+              #run: sfdx force:source:deploy -u dopssudhir@salesforcedev.com -x package/package.xml --postdestructivechanges destructiveChanges/destructiveChanges.xml
+              run:  sfdx force:source:deploy -u dopssudhir@salesforcedev.com --manifest manifest/package.xml
