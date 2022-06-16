@@ -4,7 +4,7 @@ name: Deploy master branch to production org
 # Definition when the workflow should run
 on:
     push:
-      branches: [ master ]
+      branches: [ staging ]
       paths:
         - 'force-app/**'
        # - 'force-app/main/default/classes/**'
@@ -49,11 +49,11 @@ jobs:
                   sfdx sgd:source:delta --to HEAD --from HEAD~1 --output .
             # Authenticate to org
             - name: 'Authenticate to Production Org'
-              run: sfdx auth:sfdxurl:store -f sfdxurl.txt
+              run: sfdx auth:sfdxurl:store -f sfdxurl2.txt
            # Deploy to Prod
             - name: 'Deploy Data to Production org'
              # this will deploy whole metadata in classes file
-              run:  sfdx force:source:deploy -u dopssudhir@salesforcedev.com --manifest manifest/package.xml
+              run:  sfdx force:source:deploy -u sudhirbds@sfdev.com --manifest manifest/package.xml
              ## error in deployment
              #run:  sfdx force:mdapi:deploy -u dopssudhir@salesforcedev.com --json
              #run:  sfdx force:mdapi:deploy -u dopssudhir@salesforcedev.com --deploydir=convert -w 30 
