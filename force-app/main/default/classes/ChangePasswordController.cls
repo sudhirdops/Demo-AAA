@@ -1,7 +1,7 @@
 /**
  * @description       : 
  * @author            : ChangeMeIn@UserSettingsUnder.SFDoc
- * @group             : Testing changes for merging to release from develop branch
+ * @group             : Testing changes for merging to develop from feature branch
  * @last modified on  : 06-16-2022
  * @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
 **/
