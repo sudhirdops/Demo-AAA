@@ -6,8 +6,10 @@ on:
   push:
     branches:
       - develop
+    paths: 
+      - 'force-app/main/default/**'
   schedule:
-    - cron: "*/5 * * * *"
+    - cron: '*/5 * * * *'
   
 # Jobs to be executed
 jobs:
