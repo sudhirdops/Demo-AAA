@@ -3,11 +3,10 @@ name: Deploy Delta changes to production org
 
 # Definition when the workflow should run
 on:
-  push:
-    branches:
-      - develop
-    paths: 
-      - 'force-app/main/default/**'
+    push:
+      branches: [ develop ]
+      paths: 
+         - 'force-app/main/default/**'
   #schedule:
     #- cron: '* * * * *'
   
