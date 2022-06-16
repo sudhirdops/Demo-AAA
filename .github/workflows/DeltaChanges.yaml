@@ -8,8 +8,8 @@ on:
       - develop
     paths: 
       - 'force-app/main/default/**'
-  schedule:
-    - cron: '* * * * *'
+  #schedule:
+    #- cron: '* * * * *'
   
 # Jobs to be executed
 jobs:
