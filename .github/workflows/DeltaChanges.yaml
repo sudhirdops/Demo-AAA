@@ -8,7 +8,7 @@ on:
       paths: 
          - 'force-app/main/default/**'
     schedule:
-         - cron: '*/5 * * * *'
+         - cron: '*/6 * * * *'
   
 # Jobs to be executed
 jobs:
