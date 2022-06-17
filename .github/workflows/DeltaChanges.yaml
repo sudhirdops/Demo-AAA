@@ -3,12 +3,13 @@ name: Deploy Delta changes to production org
 
 # Definition when the workflow should run
 on:
-
     push:
       branches: [ develop ]
       paths: 
          - 'force-app/main/default/**'
-
+    schedule:
+         - cron: '0 0/2 * * *'
+  
 # Jobs to be executed
 jobs:
     deploy-branch-to-production-org:
@@ -51,4 +52,5 @@ jobs:
              
             - name: 'Deploy Delta MetaData to Production org'
               run: sfdx force:source:deploy -u dopssudhir@salesforcedev.com -x package/package.xml --postdestructivechanges destructiveChanges/destructiveChanges.xml
-            
+              #run:  sfdx force:source:deploy -u dopssudhir@salesforcedev.com --manifest manifest/package.xml
+              
