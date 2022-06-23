@@ -47,11 +47,12 @@ jobs:
               run: | 
                    sfdx sgd:source:delta --to HEAD --from HEAD~1 --output .
             
-                    Authenticate to org
-                    run: sfdx auth:accesstoken:store --instanceurl https://sfdevcom48-dev-ed.my.salesforce.com
+              
+              
              
-            #- name: 'Authenticate to Production Org'
+            - name: 'Authenticate to Production Org'
              # run: sfdx auth:sfdxurl:store -f sfdxurl.txt
+              run: sfdx auth:accesstoken:store --instanceurl https://sfdevcom48-dev-ed.my.salesforce.com
                
             - name: 'Deploy Delta MetaData to Production org'
               run: sfdx force:source:deploy -u dopssudhir@salesforcedev.com -x package/package.xml --postdestructivechanges destructiveChanges/destructiveChanges.xml
