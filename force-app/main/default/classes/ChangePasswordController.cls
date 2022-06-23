@@ -4,7 +4,7 @@
  * @group             : Testing
  * @last modified on  : 06-23-2022
  * @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
-**/
+**//
 public with sharing class ChangePasswordController {
     public String oldPassword {get; set;}
     public String newPassword {get; set;}
