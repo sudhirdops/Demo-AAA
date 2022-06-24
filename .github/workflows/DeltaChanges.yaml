@@ -51,13 +51,14 @@ jobs:
               
              
             - name: 'Authenticate to Production Org'
-              run: sfdx force://<CLIENTID>:<CLEINTSECRET>:<REFRESHTOKEN>@<INSTANCEURL> -f ./SFDX_PRODUCTION_URL.txt -s -a production
+             # run: sfdx force://<CLIENTID>:<CLEINTSECRET>:<REFRESHTOKEN>@<INSTANCEURL> -f ./SFDX_PRODUCTION_URL.txt -s -a production
              # run: sfdx auth:sfdxurl:store -f sfdxurl.txt
+              run: sfdx auth:sfdxurl:store -f SFDX_PRODUCTION_URL.txt
              # run: sfdx auth:accesstoken:store --instanceurl https://sfdevcom48-dev-ed.my.salesforce.com --noprompt
              # run: sfdx force:auth:accesstoken:store --instanceurl https://sfdevcom48-dev-ed.my.salesforce.com --noprompt
                
                
             - name: 'Deploy Delta MetaData to Production org'
-              run: sfdx force:source:deploy -u sudhirbds@sfdev.com -x package/package.xml --postdestructivechanges destructiveChanges/destructiveChanges.xml
-              #run:  sfdx force:source:deploy -u dopssudhir@salesforcedev.com --manifest manifest/package.xml
+              #run: sfdx force:source:deploy -u sudhirbds@sfdev.com -x package/package.xml --postdestructivechanges destructiveChanges/destructiveChanges.xml
+              run:  sfdx force:source:deploy -u dopssudhir@salesforcedev.com --manifest manifest/package.xml
               
