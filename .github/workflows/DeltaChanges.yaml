@@ -53,7 +53,7 @@ jobs:
             - name: 'Authenticate to Production Org'
              # run: sfdx auth:sfdxurl:store -f sfdxurl.txt
              # run: sfdx auth:accesstoken:store --instanceurl https://sfdevcom48-dev-ed.my.salesforce.com --noprompt
-              run: force:auth:accesstoken:store --instanceurl https://sfdevcom48-dev-ed.my.salesforce.com --noprompt
+              run: sfdx force:auth:accesstoken:store --instanceurl https://sfdevcom48-dev-ed.my.salesforce.com --noprompt
                
             - name: 'Deploy Delta MetaData to Production org'
               run: sfdx force:source:deploy -u sudhirbds@sfdev.com -x package/package.xml --postdestructivechanges destructiveChanges/destructiveChanges.xml
