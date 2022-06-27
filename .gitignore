@@ -38,3 +38,6 @@ $RECYCLE.BIN/
 
 # Local environment variables
 .env
+sfdxurlcrdev.txt
+authfilecrdev.json
+authfilepartialsb.json
