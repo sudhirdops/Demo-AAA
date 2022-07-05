@@ -3,6 +3,7 @@ name: Deploy Delta changes to production org
 
 # Definition when the workflow should run
 on:
+    workflow_dispatch:
     pull_request:
       branches: [ develop ]
       paths: 
