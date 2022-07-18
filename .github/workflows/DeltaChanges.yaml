@@ -53,7 +53,7 @@ jobs:
              
             - name: 'Authenticate to Production Org'
              # run: sfdx force://<CLIENTID>:<CLEINTSECRET>:<REFRESHTOKEN>@<INSTANCEURL> -f ./SFDX_PRODUCTION_URL.txt -s -a production
-              run: sfdx auth:sfdxurl:store -f sfdxur2.txt
+              run: sfdx auth:sfdxurl:store -f sfdxurl2.txt
               #run: sfdx auth:sfdxurl:store -f SFDX_PRODUCTION_URL.txt
              # run: sfdx auth:accesstoken:store --instanceurl https://sfdevcom48-dev-ed.my.salesforce.com --noprompt
              # run: sfdx force:auth:accesstoken:store --instanceurl https://sfdevcom48-dev-ed.my.salesforce.com --noprompt
