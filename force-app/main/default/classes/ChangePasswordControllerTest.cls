@@ -1,5 +1,5 @@
 /**
- * An apex page controllerhhhhhhhhhh
+ * An apex page controller check
  */
 @IsTest public with sharing class ChangePasswordControllerTest {
    	@IsTest(SeeAllData=true) public static void testChangePasswordController() 
